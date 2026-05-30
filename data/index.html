@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ESP32-CAM</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h1>ESP32-CAM</h1>
+
+<img id="bild" src="/jpg">
+
+<br>
+
+<button onclick="toggle()">Streaming starten</button>
+
+<script>
+let on = false;
+
+function toggle() {
+    let img = document.getElementById("bild");
+    let btn = document.querySelector("button");
+
+    on = !on;
+
+    img.src = on ? "/stream" : "/jpg?t=" + Date.now();
+    btn.innerText = on ? "Streaming stoppen" : "Streaming starten";
+}
+</script>
+
+</body>
+</html>
