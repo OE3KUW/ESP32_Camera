@@ -2,7 +2,7 @@
  *
  *                              E S P 3 2   C a m e r a
  *
- *                                                        kuran june 2026
+ *                                                                      kuran june 2026
  ***************************************************************************************/
 
 #include <Arduino.h>
@@ -124,7 +124,7 @@ void stream()
 
         esp_camera_fb_return(fb);
 
-        delay(40);   // ca. 20–25 Bilder/s möglich, je nach Board
+        delay(10);   // ca. 20–25 Bilder/s möglich, je nach Board
     }
 }
 
